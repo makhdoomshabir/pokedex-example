@@ -1,4 +1,3 @@
-version: 2.1
 jobs:
 test:
   machine:
@@ -18,8 +17,8 @@ deploy:
     - run:
         name: Deploy Application
         command: ssh $SSH_USER@$SSH_HOST "cd ~/pokedex-example && npm run serve"
-version: 2.1
 workflows:
+version: 2.1
 test-and-deploy:
   jobs:
     - test
