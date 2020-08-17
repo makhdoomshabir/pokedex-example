@@ -20,10 +20,10 @@ deploy:
         name: Deploy Application
         command: ssh $SSH_USER@$SSH_HOST "cd ~/pokedex-example && npm run serve"
 workflows:
-version: 2.1
-test-and-deploy:
-  jobs:
-    - test
-    - deploy:
+  version: 2.1
+  test-and-deploy:
+    jobs:
+     - test
+     - deploy:
         requires:
           - test
